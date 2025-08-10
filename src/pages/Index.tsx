@@ -38,51 +38,63 @@ const Index = () => {
         </FadeIn>
 
         {/* Services Section (Inspired by "The right insurance plan for every need.") */}
-        <FadeIn delay={200} duration={800}>
-          <section className="py-12">
+        <section className="py-12">
+          <FadeIn delay={100} duration={800}> {/* Apply FadeIn to the title */}
             <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-10">
               Our Comprehensive Care Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FadeIn delay={200} duration={800}>
               <ServiceCard
                 icon={<ShieldCheck className="h-12 w-12" />}
                 title="Personal Care"
                 description="Assistance with daily activities like bathing, dressing, and grooming, ensuring comfort and dignity."
                 link="/services/personal-care"
               />
+            </FadeIn>
+            <FadeIn delay={300} duration={800}>
               <ServiceCard
                 icon={<Building className="h-12 w-12" />}
                 title="Homemaking"
                 description="Support with light housekeeping, meal preparation, and errands to maintain a tidy home."
                 link="/services/homemaking"
               />
+            </FadeIn>
+            <FadeIn delay={400} duration={800}>
               <ServiceCard
                 icon={<Home className="h-12 w-12" />}
                 title="Companionship"
                 description="Friendly visits, engaging conversations, and activities to combat loneliness and promote well-being."
                 link="/services/companionship"
               />
+            </FadeIn>
+            <FadeIn delay={500} duration={800}>
               <ServiceCard
                 icon={<HeartPulse className="h-12 w-12" />}
                 title="Medication Reminders"
                 description="Gentle reminders to take medications on time, ensuring adherence to prescribed regimens."
                 link="/services/medication-reminders"
               />
+            </FadeIn>
+            <FadeIn delay={600} duration={800}>
               <ServiceCard
                 icon={<Car className="h-12 w-12" />}
                 title="Transportation"
                 description="Safe and reliable transport to appointments, social events, and shopping."
                 link="/services/transportation"
               />
+            </FadeIn>
+            <FadeIn delay={700} duration={800}>
               <ServiceCard
                 icon={<Users className="h-12 w-12" />}
                 title="Respite Care"
                 description="Temporary relief for family caregivers, providing them with a much-needed break."
                 link="/services/respite-care"
               />
-            </div>
-          </section>
-        </FadeIn>
+            </FadeIn>
+          </div>
+        </section>
 
         {/* Caregivers Section */}
         <FadeIn delay={300} duration={800}>

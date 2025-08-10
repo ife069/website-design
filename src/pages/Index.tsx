@@ -17,7 +17,7 @@ const Index = () => {
         <FadeIn delay={100} duration={800}>
           <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden rounded-lg shadow-lg">
             <img
-              src="https://media.istockphoto.com/id/1719538017/photo/home-care-healthcare-professional-hugging-senior-patient.jpg?b=1&s=612x612&w=0&k=20&c=SQ0Cv7kIMRq2Fw73tAsdtYkN0Ig3LP5fttNn1IXIqKY="
+              src="https://media.istockphoto.com/id/1719538017/photo/home-care-healthcare-professional-hugging-senior-patient.jpg?b=1&s=612x612&w=0&k=20&c=SQ0Cv7kIMRq2Fw73tNn1IXIqKY="
               alt="Home care healthcare professional hugging senior patient"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -33,6 +33,22 @@ const Index = () => {
                   Learn More
                 </Button>
               </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        {/* YouTube Video Section */}
+        <FadeIn delay={200} duration={800}>
+          <section className="py-8">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 Aspect Ratio */ }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/BLBLMOiuXyU?autoplay=1&mute=1&controls=0&loop=1&playlist=BLBLMOiuXyU"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </section>
         </FadeIn>

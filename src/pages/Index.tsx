@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import ServiceCard from "@/components/ServiceCard";
+import ContactForm from "@/components/ContactForm"; // Import the new ContactForm component
 import { ShieldCheck, Building, Home, HeartPulse, Car, Users } from 'lucide-react'; // Icons for service cards
 
 const Index = () => {
@@ -97,20 +98,16 @@ const Index = () => {
           </Card>
         </section>
 
-        {/* Contact Form Section Placeholder */}
+        {/* Contact Form Section */}
         <section className="py-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
             Contact Us
           </h2>
           <div className="bg-card p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-            <p className="text-lg text-card-foreground">
+            <p className="text-lg text-card-foreground mb-6">
               Please fill out the form below to get in touch with us.
             </p>
-            {/* Placeholder for an actual contact form component */}
-            <div className="mt-6 p-8 border-2 border-dashed border-amb-tertiary rounded-lg text-amb-tertiary">
-              <p className="font-semibold">Contact Form will go here</p>
-              <p className="text-sm mt-2">We'll build this out in a future step!</p>
-            </div>
+            <ContactForm /> {/* Render the new ContactForm component here */}
           </div>
         </section>
 

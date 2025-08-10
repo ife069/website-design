@@ -1,9 +1,64 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Leaf, ShoppingCart } from 'lucide-react'; // Using Leaf for the logo icon
+import { Leaf, ShoppingCart, Menu } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import MobileNav from './MobileNav'; // Import the new MobileNav component
+import { cn } from '@/lib/utils';
+
+interface NavItem {
+  title: string;
+  href: string;
+  submenu?: NavItem[];
+}
+
+const navItems: NavItem[] = [
+  {
+    title: "Home",
+    href: "/",
+    submenu: [
+      { title: "About", href: "/about" },
+      { title: "State Funding", href: "/state-funding" },
+      { title: "FAQ", href: "/faq" },
+    ],
+  },
+  {
+    title: "Services",
+    href: "/services",
+    submenu: [
+      { title: "Elderly Home Care", href: "/services/elderly-home-care" },
+      { title: "Intellectually Disabled & Special Needs", href: "/services/intellectually-disabled-special-needs" },
+      { title: "Mommy Care", href: "/services/mommy-care" },
+    ],
+  },
+  {
+    title: "Caregivers",
+    href: "/caregivers",
+    submenu: [
+      { title: "Caregiver Referral Program", href: "/caregivers/referral-program" },
+      { title: "AMB Newsletter", href: "/caregivers/newsletter" },
+    ],
+  },
+  {
+    title: "COVID-19 Update",
+    href: "/covid-19-update",
+    submenu: [
+      { title: "2024 New Update", href: "/covid-19-update/2024-new-update" },
+      { title: "Influenza vs COVID-19", href: "/covid-19-update/influenza-vs-covid-19" },
+    ],
+  },
+  { title: "Resources", href: "/resources" },
+  { title: "Contact", href: "/contact" },
+];
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
     <header className="w-full bg-white text-amb-dark p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
@@ -15,10 +70,46 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           <ul className="flex space-x-6">
-            <li><Link to="/" className="text-amb-dark hover:text-amb-primary transition-colors font-medium">Home</Link></li>
-            <li><Link to="/services" className="text-amb-dark hover:text-amb-primary transition-colors font-medium">Services</Link></li>
-            <li><Link to="/about" className="text-amb-dark hover:text-amb-primary transition-colors font-medium">About Us</Link></li>
-            <li><Link to="/contact" className="text-amb-dark hover:text-amb-primary transition-colors font-medium">Contact</Link></li>
+            {navItems.map((item) => (
+              item.submenu ? (
+                <li key={item.title}>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" className="text-amb-dark hover:text-amb-primary font-medium data-[state=open]:text-amb-primary">
+                        {item.title}
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-56 bg-white shadow-lg rounded-md p-1">
+                      {item.submenu.map((subItem) => (
+                        <DropdownMenuItem key={subItem.title} asChild>
+                          <Link
+                            to={subItem.href}
+                            className={cn(
+                              "block px-4 py-2 text-sm text-amb-dark hover:bg-gray-100 hover:text-amb-primary transition-colors cursor-pointer",
+                              location.pathname === subItem.href && "font-semibold text-amb-primary"
+                            )}
+                          >
+                            {subItem.title}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </li>
+              ) : (
+                <li key={item.title}>
+                  <Link
+                    to={item.href}
+                    className={cn(
+                      "text-amb-dark hover:text-amb-primary transition-colors font-medium",
+                      location.pathname === item.href && "font-semibold text-amb-primary"
+                    )}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              )
+            ))}
           </ul>
           <Button className="bg-amb-accent hover:bg-amb-primary text-amb-dark px-6 py-2 rounded-md shadow-sm transition-colors duration-300">
             Get Insurance
@@ -26,16 +117,13 @@ const Navbar = () => {
           <ShoppingCart className="h-6 w-6 text-amb-dark cursor-pointer hover:text-amb-primary transition-colors" />
         </nav>
 
-        {/* Mobile Navigation (Placeholder for a hamburger menu or similar) */}
+        {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-4">
           <Button className="bg-amb-accent hover:bg-amb-primary text-amb-dark px-4 py-2 rounded-md shadow-sm transition-colors duration-300 text-sm">
             Get Insurance
           </Button>
           <ShoppingCart className="h-6 w-6 text-amb-dark cursor-pointer hover:text-amb-primary transition-colors" />
-          {/* You might add a Sheet or Dialog component here for a mobile menu */}
-          {/* <Button variant="ghost" size="icon">
-            <Menu className="h-6 w-6" />
-          </Button> */}
+          <MobileNav navItems={navItems} />
         </div>
       </div>
     </header>

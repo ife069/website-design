@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import ServiceCard from "@/components/ServiceCard";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer"; // Import the new Footer component
 import { ShieldCheck, Building, Home, HeartPulse, Car, Users } from 'lucide-react';
 import FadeIn from '@/components/FadeIn'; // Import the new FadeIn component
 
@@ -163,10 +164,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="w-full bg-amb-dark text-amb-light p-4 text-center">
-        <p>&copy; {new Date().getFullYear()} Able Mind & Body. All rights reserved.</p>
-        <MadeWithDyad />
-      </footer>
+      <Footer />
     </div>
   );
 };

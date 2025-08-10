@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { Menu, Leaf } from 'lucide-react';
+import { Menu } from 'lucide-react'; // Removed Leaf icon
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
 
@@ -34,7 +34,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ navItems }) => {
       </SheetTrigger>
       <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-white p-6">
         <Link to="/" className="flex items-center space-x-2 text-amb-primary mb-6" onClick={() => setIsOpen(false)}>
-          <Leaf className="h-8 w-8" />
+          <img src="/able-mind-body-website-logo.jpg" alt="Able Mind & Body Logo" className="h-10 w-10 object-contain" /> {/* New logo image */}
           <span className="text-2xl font-bold">Able Mind & Body</span>
         </Link>
         <nav className="flex flex-col space-y-4">

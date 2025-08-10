@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Leaf, ShoppingCart, Menu } from 'lucide-react';
+import { ShoppingCart, Menu } from 'lucide-react'; // Removed Leaf icon
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import MobileNav from './MobileNav'; // Import the new MobileNav component
+import MobileNav from './MobileNav';
 import { cn } from '@/lib/utils';
 
 interface NavItem {
@@ -63,7 +63,7 @@ const Navbar = () => {
     <header className="w-full bg-white text-amb-dark p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-amb-primary hover:text-amb-dark transition-colors">
-          <Leaf className="h-8 w-8" />
+          <img src="/able-mind-body-website-logo.jpg" alt="Able Mind & Body Logo" className="h-10 w-10 object-contain" /> {/* New logo image */}
           <span className="text-2xl font-bold">Able Mind & Body</span>
         </Link>
 

@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-amb-primary hover:text-amb-dark transition-colors">
           <Leaf className="h-8 w-8" />
-          <span className="text-2xl font-bold">Care</span>
+          <span className="text-2xl font-bold">Able Mind & Body</span>
         </Link>
 
         {/* Desktop Navigation */}

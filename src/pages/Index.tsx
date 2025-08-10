@@ -17,8 +17,8 @@ const Index = () => {
         <FadeIn delay={100} duration={800}>
           <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden rounded-lg shadow-lg">
             <img
-              src="https://via.placeholder.com/1920x1080?text=Elderly+woman+in+wheelchair+with+caregiver"
-              alt="Elderly woman in wheelchair with caregiver"
+              src="https://media.istockphoto.com/id/1719538017/photo/home-care-healthcare-professional-hugging-senior-patient.jpg?b=1&s=612x612&w=0&k=20&c=SQ0Cv7kIMRq2Fw73tAsdtYkN0Ig3LP5fttNn1IXIqKY="
+              alt="Home care healthcare professional hugging senior patient"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center justify-start p-8 md:p-16">

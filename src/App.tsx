@@ -31,7 +31,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500); // Show loading screen for 1.5 seconds
+    }, 1000); // Show loading screen for 1 second
 
     return () => clearTimeout(timer);
   }, []);

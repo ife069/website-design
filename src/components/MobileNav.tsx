@@ -42,7 +42,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ navItems }) => {
             item.submenu ? (
               <Accordion type="single" collapsible className="w-full" key={item.title}>
                 <AccordionItem value={item.title}>
-                  <AccordionTrigger className="text-lg font-medium text-amb-dark hover:text-amb-primary py-2">
+                  <AccordionTrigger className="text-lg font-medium text-amb-dark hover:text-amb-primary py-2 text-center">
                     {item.title}
                   </AccordionTrigger>
                   <AccordionContent className="pl-4">
@@ -52,7 +52,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ navItems }) => {
                           <Link
                             to={subItem.href}
                             className={cn(
-                              "block py-2 text-amb-dark hover:text-amb-primary transition-colors",
+                              "block py-2 text-amb-dark hover:text-amb-primary transition-colors text-center",
                               location.pathname === subItem.href && "font-semibold text-amb-primary"
                             )}
                             onClick={() => setIsOpen(false)}
@@ -70,7 +70,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ navItems }) => {
                 key={item.title}
                 to={item.href}
                 className={cn(
-                  "text-lg font-medium text-amb-dark hover:text-amb-primary transition-colors py-2",
+                  "text-lg font-medium text-amb-dark hover:text-amb-primary transition-colors py-2 text-center",
                   location.pathname === item.href && "font-semibold text-amb-primary"
                 )}
                 onClick={() => setIsOpen(false)}

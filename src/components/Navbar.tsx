@@ -75,7 +75,7 @@ const Navbar = () => {
                 <li key={item.title}>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" className="text-amb-dark hover:text-amb-primary font-medium data-[state=open]:text-amb-primary">
+                      <Button variant="ghost" className="text-amb-dark hover:text-amb-primary font-medium data-[state=open]:text-amb-primary text-center">
                         {item.title}
                       </Button>
                     </DropdownMenuTrigger>
@@ -85,7 +85,7 @@ const Navbar = () => {
                           <Link
                             to={subItem.href}
                             className={cn(
-                              "block px-4 py-2 text-sm text-amb-dark hover:bg-gray-100 hover:text-amb-primary transition-colors cursor-pointer",
+                              "block px-4 py-2 text-sm text-amb-dark hover:bg-gray-100 hover:text-amb-primary transition-colors cursor-pointer text-center",
                               location.pathname === subItem.href && "font-semibold text-amb-primary"
                             )}
                           >
@@ -101,7 +101,7 @@ const Navbar = () => {
                   <Link
                     to={item.href}
                     className={cn(
-                      "text-amb-dark hover:text-amb-primary transition-colors font-medium",
+                      "text-amb-dark hover:text-amb-primary transition-colors font-medium text-center",
                       location.pathname === item.href && "font-semibold text-amb-primary"
                     )}
                   >

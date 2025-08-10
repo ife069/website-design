@@ -62,6 +62,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom AMB Colors
+        'amb-light': 'hsl(var(--amb-light))',
+        'amb-primary': 'hsl(var(--amb-primary))',
+        'amb-dark': 'hsl(var(--amb-dark))',
+        'amb-accent': 'hsl(var(--amb-accent))',
+        'amb-tertiary': 'hsl(var(--amb-tertiary))',
       },
       borderRadius: {
         lg: "var(--radius)",

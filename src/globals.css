@@ -49,6 +49,13 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom AMB Colors */
+    --amb-light: 200 15% 95%; /* #edf3f2 */
+    --amb-primary: 174 33% 42%; /* #4a8f87 */
+    --amb-dark: 206 20% 16%; /* #1f2e37 */
+    --amb-accent: 174 33% 75%; /* #9fdad5 */
+    --amb-tertiary: 24 25% 70%; /* #bc8c74 */
   }
 
   .dark {
@@ -87,6 +94,13 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom AMB Colors for Dark Mode (adjust as needed) */
+    --amb-light: 206 20% 16%; /* Dark background */
+    --amb-primary: 174 33% 55%; /* Slightly lighter primary */
+    --amb-dark: 200 15% 95%; /* Light text */
+    --amb-accent: 174 33% 65%; /* Slightly lighter accent */
+    --amb-tertiary: 24 25% 60%; /* Slightly darker tertiary */
   }
 }
 

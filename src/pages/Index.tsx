@@ -14,8 +14,8 @@ const Index = () => {
         {/* Hero Section */}
         <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden rounded-lg shadow-lg">
           <img
-            src="/placeholder.svg" // Placeholder image, replace with a relevant image
-            alt="Happy family"
+            src="https://via.placeholder.com/1920x1080?text=Elderly+woman+in+wheelchair+with+caregiver" // Updated placeholder image
+            alt="Elderly woman in wheelchair with caregiver"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center justify-start p-8 md:p-16">

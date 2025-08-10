@@ -1,38 +1,81 @@
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
+import ServiceCard from "@/components/ServiceCard";
+import { ShieldCheck, Building, Home, HeartPulse, Car, Users } from 'lucide-react'; // Icons for service cards
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
-      {/* Header */}
-      <header className="w-full bg-amb-primary text-amb-light p-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Able Mind & Body Home Care</h1>
-          {/* Navigation placeholder */}
-          <nav>
-            {/* <ul className="flex space-x-4">
-              <li><a href="#" className="hover:text-amb-accent">Home</a></li>
-              <li><a href="#" className="hover:text-amb-accent">Services</a></li>
-              <li><a href="#" className="hover:text-amb-accent">About Us</a></li>
-              <li><a href="#" className="hover:text-amb-accent">Contact</a></li>
-            </ul> */}
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="flex-grow container mx-auto px-4 py-8 space-y-12">
         {/* Hero Section */}
-        <section className="text-center py-16 bg-card rounded-lg shadow-lg">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-6 leading-tight">
-            Dignified, Independent Living at Home
+        <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="/placeholder.svg" // Placeholder image, replace with a relevant image
+            alt="Happy family"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center justify-start p-8 md:p-16">
+            <div className="max-w-xl text-white">
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                Dignified, Independent Living at Home
+              </h2>
+              <p className="text-lg md:text-xl mb-8">
+                Able Mind & Body Home Care is an in-home care provider dedicated to helping individuals lead dignified, independent lifestyles in the comfort and safety of their own homes. Our unique community-based approach to service enables us to fully understand the needs of each individual and create a customized care plan.
+              </p>
+              <Button className="bg-amb-tertiary hover:bg-amb-tertiary/90 text-amb-light px-8 py-3 text-lg rounded-full shadow-md transition-colors duration-300">
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section (Inspired by "The right insurance plan for every need.") */}
+        <section className="py-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-10">
+            Our Comprehensive Care Services
           </h2>
-          <p className="text-lg md:text-xl text-card-foreground max-w-3xl mx-auto mb-8">
-            Able Mind & Body Home Care is an in-home care provider dedicated to helping individuals lead dignified, independent lifestyles in the comfort and safety of their own homes. Our unique community-based approach to service enables us to fully understand the needs of each individual and create a customized care plan.
-          </p>
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg rounded-full shadow-md transition-colors duration-300">
-            Learn More
-          </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard
+              icon={<ShieldCheck className="h-12 w-12" />}
+              title="Personal Care"
+              description="Assistance with daily activities like bathing, dressing, and grooming, ensuring comfort and dignity."
+              link="/services/personal-care"
+            />
+            <ServiceCard
+              icon={<Building className="h-12 w-12" />}
+              title="Homemaking"
+              description="Support with light housekeeping, meal preparation, and errands to maintain a tidy home."
+              link="/services/homemaking"
+            />
+            <ServiceCard
+              icon={<Home className="h-12 w-12" />}
+              title="Companionship"
+              description="Friendly visits, engaging conversations, and activities to combat loneliness and promote well-being."
+              link="/services/companionship"
+            />
+            <ServiceCard
+              icon={<HeartPulse className="h-12 w-12" />}
+              title="Medication Reminders"
+              description="Gentle reminders to take medications on time, ensuring adherence to prescribed regimens."
+              link="/services/medication-reminders"
+            />
+            <ServiceCard
+              icon={<Car className="h-12 w-12" />}
+              title="Transportation"
+              description="Safe and reliable transport to appointments, social events, and shopping."
+              link="/services/transportation"
+            />
+            <ServiceCard
+              icon={<Users className="h-12 w-12" />}
+              title="Respite Care"
+              description="Temporary relief for family caregivers, providing them with a much-needed break."
+              link="/services/respite-care"
+            />
+          </div>
         </section>
 
         {/* Caregivers Section */}

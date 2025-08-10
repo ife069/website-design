@@ -15,7 +15,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ isVisible }) => {
     >
       <div className="relative flex items-center justify-center">
         <img
-          src="/able-mind-body-website-logo.jpg"
+          src="https://static.wixstatic.com/media/077e28_d4159ed6792442fd98c42a5904e837ba~mv2.png/v1/fill/w_148,h_104,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/077e28_d4159ed6792442fd98c42a5904e837ba~mv2.png"
           alt="Able Mind & Body Logo"
           className="h-32 w-32 object-contain z-10"
         />

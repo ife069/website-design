@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Menu } from 'lucide-react'; // Removed Leaf icon
+import { ShoppingCart, Menu } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -63,7 +63,7 @@ const Navbar = () => {
     <header className="w-full bg-white text-amb-dark p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-amb-primary hover:text-amb-dark transition-colors">
-          <img src="/able-mind-body-website-logo.jpg" alt="Able Mind & Body Logo" className="h-10 w-10 object-contain" /> {/* New logo image */}
+          <img src="https://static.wixstatic.com/media/077e28_d4159ed6792442fd98c42a5904e837ba~mv2.png/v1/fill/w_148,h_104,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/077e28_d4159ed6792442fd98c42a5904e837ba~mv2.png" alt="Able Mind & Body Logo" className="h-10 w-10 object-contain" />
           <span className="text-2xl font-bold">Able Mind & Body</span>
         </Link>
 

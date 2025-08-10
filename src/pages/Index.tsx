@@ -24,7 +24,7 @@ const Index = () => {
                 Dignified, Independent Living at Home
               </h2>
               <p className="text-lg md:text-xl mb-8">
-                Able Mind & Body Home Care is an in-home care provider dedicated to helping individuals lead dignified, independent lifestyles in the comfort and safety of their own homes. Our unique community-based approach to service enables us to fully understand the needs of each individual and create a customized care plan.
+                Able Mind & Body is an in-home care provider dedicated to helping individuals lead dignified, independent lifestyles in the comfort and safety of their own homes. Our unique community-based approach to service enables us to fully understand the needs of each individual and create a customized care plan.
               </p>
               <Button className="bg-amb-tertiary hover:bg-amb-tertiary/90 text-amb-light px-8 py-3 text-lg rounded-full shadow-md transition-colors duration-300">
                 Learn More
@@ -118,17 +118,17 @@ const Index = () => {
         <section className="py-12 bg-card rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-bold text-card-foreground mb-4">Disclaimer</h2>
           <p className="text-sm text-card-foreground leading-relaxed">
-            Able Mind & Body Home Care (AMB) does not discriminate on the basis of race, color, national origin, sex, religion, age or disability in employment or the provision of services. AMB will take appropriate action to provide reasonable accommodations to qualified employees and applicants with disabilities, unless providing such accommodations creates an undue hardship. “Able Mind & Body Home Care is committed to providing reasonable accommodations for qualified individuals with disabilities in a fair and equitable manner and in accordance with applicable federal and state law. We seek to promote a diverse and inclusive work community.”Able Mind & Body Home Care (AMB) does not discriminate on the basis of race, color, national origin, sex, religion, age or disability in employment or the provision of services. AMB will take appropriate action to provide reasonable accommodations to qualified employees and applicants with disabilities, unless providing such accommodations creates an undue hardship.
+            Able Mind & Body (AMB) does not discriminate on the basis of race, color, national origin, sex, religion, age or disability in employment or the provision of services. AMB will take appropriate action to provide reasonable accommodations to qualified employees and applicants with disabilities, unless providing such accommodations creates an undue hardship. “Able Mind & Body is committed to providing reasonable accommodations for qualified individuals with disabilities in a fair and equitable manner and in accordance with applicable federal and state law. We seek to promote a diverse and inclusive work community.”Able Mind & Body (AMB) does not discriminate on the basis of race, color, national origin, sex, religion, age or disability in employment or the provision of services. AMB will take appropriate action to provide reasonable accommodations to qualified employees and applicants with disabilities, unless providing such accommodations creates an undue hardship.
           </p>
           <p className="text-sm text-card-foreground leading-relaxed mt-4">
-            “Able Mind & Body Home Care is committed to providing reasonable accommodations for qualified individuals with disabilities in a fair and equitable manner and in accordance with applicable federal and state law. We seek to promote a diverse and inclusive work community.”
+            “Able Mind & Body is committed to providing reasonable accommodations for qualified individuals with disabilities in a fair and equitable manner and in accordance with applicable federal and state law. We seek to promote a diverse and inclusive work community.”
           </p>
         </section>
       </main>
 
       {/* Footer */}
       <footer className="w-full bg-amb-dark text-amb-light p-4 text-center">
-        <p>&copy; {new Date().getFullYear()} Able Mind & Body Home Care. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Able Mind & Body. All rights reserved.</p>
         <MadeWithDyad />
       </footer>
     </div>

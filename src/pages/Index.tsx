@@ -23,11 +23,11 @@ const Index = () => {
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center justify-start p-8 md:p-16">
-              <div className="max-w-xl text-amb-secondary"> {/* Changed text-white to text-amb-secondary */}
+              <div className="max-w-xl"> {/* Removed text-amb-secondary from here as colors are now applied to spans */}
                 <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-                  Dignified, Independent Living at Home
+                  <span className="text-amb-primary">Dignified, Independent Living</span> <span className="text-amb-light">at Home</span>
                 </h2>
-                <p className="text-lg md:text-xl mb-8 text-amb-light"> {/* Added text-amb-light for the paragraph */}
+                <p className="text-lg md:text-xl mb-8 text-amb-light">
                   Able Mind & Body is an in-home care provider dedicated to helping individuals lead dignified, independent lifestyles in the comfort and safety of their own homes. Our unique community-based approach to service enables us to fully understand the needs of each individual and create a customized care plan.
                 </p>
                 <Button className="bg-amb-tertiary hover:bg-amb-tertiary/90 text-amb-light px-8 py-3 text-lg rounded-full shadow-md transition-colors duration-300">
